@@ -1,0 +1,7 @@
+fileignoreconfig:
+- filename: app/src/main/res/xml/backup_rules.xml
+  checksum: f301105c8a8ea151b3f18ed0a7c5d6e60eb9f2d07010daa12117b1fbe72e56a0
+- filename: talismanrc
+  checksum: 9dcd95194faa13696d50a2ff7c65ed8d0f30be9f470186b64f174b6d71718e91
+version: ""
+
