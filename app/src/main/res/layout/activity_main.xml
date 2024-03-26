@@ -23,105 +23,105 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <Button
-                android:id="@+id/button1"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button1" />
+<!--            <Button-->
+<!--                android:id="@+id/button1"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button1" />-->
 
-            <Button
-                android:id="@+id/button2"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button2" />
+<!--            <Button-->
+<!--                android:id="@+id/button2"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button2" />-->
 
-            <Button
-                android:id="@+id/button3"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button3" />
+<!--            <Button-->
+<!--                android:id="@+id/button3"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button3" />-->
 
-            <Button
-                android:id="@+id/button4"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button4" />
+<!--            <Button-->
+<!--                android:id="@+id/button4"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button4" />-->
 
-            <Button
-                android:id="@+id/button5"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button5" />
+<!--            <Button-->
+<!--                android:id="@+id/button5"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button5" />-->
 
-            <Button
-                android:id="@+id/button6"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button6" />
+<!--            <Button-->
+<!--                android:id="@+id/button6"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button6" />-->
 
-            <Button
-                android:id="@+id/button7"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button7" />
+<!--            <Button-->
+<!--                android:id="@+id/button7"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button7" />-->
 
-            <Button
-                android:id="@+id/button8"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button8" />
+<!--            <Button-->
+<!--                android:id="@+id/button8"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button8" />-->
 
-            <Button
-                android:id="@+id/button9"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button9" />
+<!--            <Button-->
+<!--                android:id="@+id/button9"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button9" />-->
 
-            <Button
-                android:id="@+id/button10"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="40dp"
-                android:width="200dp"
-                android:backgroundTint="@color/gray"
-                android:text="@string/button10" />
+<!--            <Button-->
+<!--                android:id="@+id/button10"-->
+<!--                style="?android:attr/buttonBarButtonStyle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:width="200dp"-->
+<!--                android:backgroundTint="@color/gray"-->
+<!--                android:text="@string/button10" />-->
 
         </LinearLayout>
 

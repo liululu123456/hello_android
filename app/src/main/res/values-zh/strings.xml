@@ -11,4 +11,15 @@
     <string name="button7">按钮 7</string>
     <string name="button6">按钮 6</string>
     <string name="button5">按钮 5</string>
+
+    <string name="button11">按钮 11</string>
+    <string name="button12">按钮 12</string>
+    <string name="button13">按钮 13</string>
+    <string name="button14">按钮 14</string>
+    <string name="button20">按钮 20</string>
+    <string name="button19">按钮 19</string>
+    <string name="button18">按钮 18</string>
+    <string name="button17">按钮 17</string>
+    <string name="button16">按钮 16</string>
+    <string name="button15">按钮 15</string>
 </resources>
