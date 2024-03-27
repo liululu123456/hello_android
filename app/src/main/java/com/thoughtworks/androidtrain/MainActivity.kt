@@ -1,5 +1,6 @@
 package com.thoughtworks.androidtrain
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
@@ -40,6 +41,13 @@ class MainActivity : AppCompatActivity() {
             layoutParams.topMargin = 16
             button.layoutParams = layoutParams
             linearlayout.addView(button)
+
+            if (i == 1){
+                button.setOnClickListener {
+                    val intent = Intent(this, ConstraintActivity::class.java)
+                    startActivity(intent)
+                }
+            }
 
         }
 
