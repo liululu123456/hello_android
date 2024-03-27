@@ -26,4 +26,10 @@
     <string name="signup">注册</string>
     <string name="login">登陆</string>
     <string name="img">图片</string>
+    <string name="fill">fill</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_passowrd">Forgot passowrd?</string>
+    <string name="email">Sign up with E-mail</string>
 </resources>
