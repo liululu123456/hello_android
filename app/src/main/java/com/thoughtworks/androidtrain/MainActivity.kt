@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            if (i == 2){
+                button.setOnClickListener {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                }
+            }
 
         }
 
