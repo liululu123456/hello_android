@@ -32,4 +32,5 @@
     <string name="remember_me">Remember me</string>
     <string name="forgot_passowrd">Forgot passowrd?</string>
     <string name="email">Sign up with E-mail</string>
+    <string name="or_connect_with">or connect with</string>
 </resources>

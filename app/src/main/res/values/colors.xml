@@ -7,4 +7,10 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="screenBackground">#FFEE58</color>
     <color name="gray">#FFA0A0A0</color>
+    <color name="editText">#e4e4e4</color>
+    <color name="checkbox">#222222</color>
+    <color name="login">#1f4ba5</color>
+    <color name="connect">#b2b2b2</color>
+    <color name="signup">#1f4ba5</color>
+
 </resources>
