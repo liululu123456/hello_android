@@ -10,7 +10,7 @@
     <string name="button8">button 8</string>
     <string name="button7">button 7</string>
     <string name="button6">button 6</string>
-    <string name="button5">button 5</string>
+    <string name="button5">relative_layout</string>
 
     <string name="button11">button 11</string>
     <string name="button12">button 12</string>
@@ -22,4 +22,12 @@
     <string name="button17">button 17</string>
     <string name="button16">button 16</string>
     <string name="button15">button 15</string>
+    <string name="anchor">程序员</string>
+    <string name="anchorRight">程序员鼓励库</string>
+    <string name="up">上</string>
+    <string name="down">下</string>
+    <string name="left">左</string>
+    <string name="right">右</string>
+    <string name="center">中间</string>
+    <string name="leftBottom">UI设计师</string>
 </resources>
