@@ -1,6 +1,4 @@
 fileignoreconfig:
-- filename: app/src/main/res/tweests.json
-  checksum: 4956f843d58a27ed90eaaa0faf6479959419c85c77c8da08031a5481589a47ac
+- filename: app/src/main/java/com/thoughtworks/androidtrain/TweetsActivity.kt
+  checksum: 10c285f84e06a470a4bd0a1a6ce6111d4ef2898035e2a22c9996353d9542126d
 version: ""
-
-
