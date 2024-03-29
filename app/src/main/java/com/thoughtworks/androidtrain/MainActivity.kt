@@ -71,6 +71,12 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            if (i == 4){
+                button.setOnClickListener {
+                    val intent = Intent(this, LanguageSelectionActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         }
 
     }
