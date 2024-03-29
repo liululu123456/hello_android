@@ -77,6 +77,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+            if (i == 5){
+                button.setOnClickListener {
+                    val intent = Intent(this, TweetsActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         }
 
     }

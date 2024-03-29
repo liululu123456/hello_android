@@ -1,13 +1,6 @@
 fileignoreconfig:
-- filename: app/src/main/res/xml/backup_rules.xml
-  checksum: f301105c8a8ea151b3f18ed0a7c5d6e60eb9f2d07010daa12117b1fbe72e56a0
-- filename: talismanrc
-  checksum: 9dcd95194faa13696d50a2ff7c65ed8d0f30be9f470186b64f174b6d71718e91
-- filename: app/build.gradle.kts
-  checksum: 92e2b51791fa6c7614ccb4bede1c7bdc15d4cd130875b41b00f8cd780d585664
-- filename: app/src/main/res/values/strings.xml
-  checksum: 144b7acfa010abd7ff7a74712328f968b0d263972e506169933480e08d87e3e9
-- filename: app/src/main/res/values-zh/strings.xml
-  checksum: 9969edb59e718e5e21049cec3a65b5349c31f0d58b1f764e7b22e3433717a11f
+- filename: app/src/main/res/tweests.json
+  checksum: 4956f843d58a27ed90eaaa0faf6479959419c85c77c8da08031a5481589a47ac
 version: ""
+
 
