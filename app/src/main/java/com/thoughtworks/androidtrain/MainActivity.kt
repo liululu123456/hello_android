@@ -94,9 +94,8 @@ class MainActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_SELECT_CONTACT) {
-            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 selectContact()
-            } else {
             }
         }
     }
@@ -119,18 +118,17 @@ class MainActivity : AppCompatActivity() {
                         val nameIndex = it.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME)
                         val name = it.getString(nameIndex)
 
-                        val cursor1: Cursor? = contentResolver.query(
+                        val phoneCursor: Cursor? = contentResolver.query(
                             ContactsContract.Data.CONTENT_URI,
                             arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER)  ,
                             null,
                             null,
                             null
                         )
-
-                        cursor1?.use {
-                            while (cursor1.moveToFirst()) {
-                                val index = cursor1.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER)
-                                val phone = cursor1.getString(index)
+                        phoneCursor?.use {
+                            if (phoneCursor.moveToFirst()) {
+                                val index = phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER)
+                                val phone = phoneCursor.getString(index)
                                 val message = "$name         $phone"
                                 Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                                 println(message)
