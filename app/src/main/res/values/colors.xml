@@ -12,5 +12,6 @@
     <color name="login">#1f4ba5</color>
     <color name="connect">#b2b2b2</color>
     <color name="signup">#1f4ba5</color>
+    <color name="leftBackgroundColor">#007aff</color>
 
 </resources>
