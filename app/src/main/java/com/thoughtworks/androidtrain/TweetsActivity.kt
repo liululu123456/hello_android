@@ -2,10 +2,10 @@ package com.thoughtworks.androidtrain
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.thoughtworks.androidtrain.adapter.CustomAdapter
 import com.thoughtworks.androidtrain.model.Tweet
 
 class TweetsActivity: AppCompatActivity() {
@@ -290,7 +290,7 @@ class TweetsActivity: AppCompatActivity() {
             "]"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tweets_layout)
+        setContentView(R.layout.activity_tweets_layout)
 
         val gson = Gson()
         val tweetListType = object : TypeToken<List<Tweet>>() {}.type

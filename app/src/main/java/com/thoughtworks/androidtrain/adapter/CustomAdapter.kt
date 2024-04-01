@@ -1,12 +1,11 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
+import com.thoughtworks.androidtrain.R
 import com.thoughtworks.androidtrain.model.Tweet
 
 class CustomAdapter(private val dataSet: List<Tweet>) :
@@ -30,23 +29,21 @@ class CustomAdapter(private val dataSet: List<Tweet>) :
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == VIEW_TYPE_ITEM) {
+        return if (viewType == VIEW_TYPE_ITEM) {
             val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.row_view, viewGroup, false)
-            return ItemViewHolder(view)
-        }
-        else {
+                .inflate(R.layout.tweets_row_view, viewGroup, false)
+            ItemViewHolder(view)
+        } else {
             val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.bottom_bar, viewGroup, false)
-            return BottomBarViewHolder(view)
+                .inflate(R.layout.tweets_bottom_bar, viewGroup, false)
+            BottomBarViewHolder(view)
         }
     }
 
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
-        if (position < dataSet.size) {
-            val itemViewHolder = viewHolder as ItemViewHolder
-            itemViewHolder.content.text = dataSet[position].content
-            itemViewHolder.sender.text = dataSet[position].sender.nick
+        if ( viewHolder is ItemViewHolder) {
+            viewHolder.content.text = dataSet[position].content
+            viewHolder.sender.text = dataSet[position].sender.nick
         }
     }
 

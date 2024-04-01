@@ -3,11 +3,13 @@ package com.thoughtworks.androidtrain
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.thoughtworks.androidtrain.fragment.AndroidTextFragment
+import com.thoughtworks.androidtrain.fragment.JavaTextFragment
 
 class LanguageSelectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.language_selection_layout)
+        setContentView(R.layout.activity_language_selection_layout)
 
         val androidButton = findViewById<Button>(R.id.android_button)
         val javaButton = findViewById<Button>(R.id.java_button)
