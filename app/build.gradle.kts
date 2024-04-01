@@ -71,8 +71,10 @@ android {
 }
 
 dependencies {
-
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.kotlinx.coroutines.android)
+    implementation(libs.gson)
+    implementation(libs.coil)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

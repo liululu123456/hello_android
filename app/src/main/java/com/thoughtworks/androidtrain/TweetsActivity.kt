@@ -2,11 +2,16 @@ package com.thoughtworks.androidtrain
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.thoughtworks.androidtrain.adapter.CustomAdapter
 import com.thoughtworks.androidtrain.model.Tweet
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class TweetsActivity: AppCompatActivity() {
     private var json = "[\n" +
@@ -288,20 +293,28 @@ class TweetsActivity: AppCompatActivity() {
             "    }\n" +
             "  }\n" +
             "]"
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tweets_layout)
-
-        val gson = Gson()
-        val tweetListType = object : TypeToken<List<Tweet>>() {}.type
-        val dataset:List<Tweet> = gson.fromJson(json, tweetListType)
-        val toDisplayData: List<Tweet> = dataset.filter { it.content != null }.toList()
-        val customAdapter = CustomAdapter(toDisplayData)
-
         val recyclerView: RecyclerView = findViewById(R.id.tweets)
-        recyclerView.adapter = customAdapter
-    }
 
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            val gson = Gson()
+            val tweetListType = object : TypeToken<List<Tweet>>() {}.type
+            val tweets = gson.fromJson<List<Tweet>>(json, tweetListType)
+                .filter { it.content != null }
+
+            withContext(Dispatchers.Main) {
+                val customAdapter = CustomAdapter(tweets)
+                recyclerView.adapter = customAdapter
+                recyclerView.layoutManager = LinearLayoutManager(this@TweetsActivity)
+
+            }
+        }
+    }
 
 
 

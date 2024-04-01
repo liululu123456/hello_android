@@ -3,12 +3,15 @@ package com.thoughtworks.androidtrain.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.ImageLoader
+import coil.request.ImageRequest
 import com.thoughtworks.androidtrain.R
 import com.thoughtworks.androidtrain.model.Tweet
 
-class CustomAdapter(private val dataSet: List<Tweet>) :
+class CustomAdapter(private var dataSet: List<Tweet>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val VIEW_TYPE_ITEM = 0
@@ -16,7 +19,9 @@ class CustomAdapter(private val dataSet: List<Tweet>) :
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val sender: TextView
         val content: TextView
+        val avatar: ImageView
         init {
+            avatar = view.findViewById(R.id.photo)
             sender = view.findViewById(R.id.sender)
             content = view.findViewById(R.id.content)
         }
@@ -44,6 +49,15 @@ class CustomAdapter(private val dataSet: List<Tweet>) :
         if ( viewHolder is ItemViewHolder) {
             viewHolder.content.text = dataSet[position].content
             viewHolder.sender.text = dataSet[position].sender.nick
+
+            val request = ImageRequest.Builder(viewHolder.avatar.context)
+                .data(dataSet[position].sender.avatar)
+                .target(viewHolder.avatar)
+                .build()
+            val imageLoader = ImageLoader.Builder(viewHolder.avatar.context)
+                .build()
+
+            imageLoader.enqueue(request)
         }
     }
 
