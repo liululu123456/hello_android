@@ -83,6 +83,13 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+
+            if (i == 6){
+                button.setOnClickListener {
+                    val intent = Intent(this, ThreadActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         }
 
     }

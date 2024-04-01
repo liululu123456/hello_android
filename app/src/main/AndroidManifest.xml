@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld"
         tools:targetApi="31">
+        <activity android:name=".ThreadActivity" />
         <activity android:name=".TweetsActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".LanguageSelectionActivity" />
