@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="page_inside_padding">20dp</dimen>
     <dimen name="marginForFragmentBtn">40dp</dimen>
     <dimen name="textSpace">10dp</dimen>
+    <dimen name="image_view_size">40dp</dimen>
 </resources>
