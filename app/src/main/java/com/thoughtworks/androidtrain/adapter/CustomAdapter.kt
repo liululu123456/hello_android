@@ -24,12 +24,11 @@ class CustomAdapter(private var dataSet: List<Tweet>) :
 
         fun bind(item: Tweet) {
             content.text = item.content
-            sender.text = item.sender.nick
-            avatar.load(item.sender.avatar)
+            sender.text = item.sender?.nick
+            avatar.load(item.sender?.avatar)
         }
     }
 
-    // 里边并没有逻辑实现，可以删掉定义
     class BottomBarViewHolder(view: View) : ViewHolder(view)
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -43,27 +42,6 @@ class CustomAdapter(private var dataSet: List<Tweet>) :
             BottomBarViewHolder(view)
         }
     }
-
-//    override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
-//
-//
-//        if (viewHolder is ItemViewHolder) {
-//            viewHolder.content.text = dataSet[position].content
-//            viewHolder.sender.text = dataSet[position].sender.nick
-//
-////            要将图像加载到自定义目标中，可以使用 ImageRequest，但是我们可以直接使用ImageView的Loader，
-////            因为coil实现在ImageView中实现了扩展方法load
-//
-//            val request = ImageRequest.Builder(viewHolder.avatar.context)
-//                .data(dataSet[position].sender.avatar)
-//                .target(viewHolder.avatar)
-//                .build()
-//            val imageLoader = ImageLoader.Builder(viewHolder.avatar.context)
-//                .build()
-//            imageLoader.enqueue(request)
-//
-//        }
-//    }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         if (viewHolder is ItemViewHolder) {
