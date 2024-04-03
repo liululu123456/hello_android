@@ -1,4 +1,4 @@
 fileignoreconfig:
-- filename: app/src/main/java/com/thoughtworks/androidtrain/DataStoreActivity.kt
-  checksum: d582f8dfd2194f8cde121f02c2e37be18d158a3e4bd64a180905fd65695fcfbb
+- filename: app/src/main/res/raw/tweets.json
+  checksum: 04bf9230d2fa7bf8636d895b7df4c9bde8b2708cba4fa43b932d8992f7379cdc
 version: ""
