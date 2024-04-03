@@ -7,16 +7,16 @@ import android.os.Bundle
 import androidx.annotation.RawRes
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.thoughtworks.androidtrain.adapter.CustomAdapter
-import com.thoughtworks.androidtrain.model.Tweet
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import com.thoughtworks.androidtrain.model.AppDatabase
+import com.thoughtworks.androidtrain.model.DataSourceImpl
+import com.thoughtworks.androidtrain.model.entity.Tweet
+import io.reactivex.schedulers.Schedulers
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 
@@ -28,23 +28,23 @@ class TweetsActivity: AppCompatActivity() {
         setContentView(R.layout.activity_tweets_layout)
         val recyclerView: RecyclerView = findViewById(R.id.tweets)
 
-
-        lifecycleScope.launch(Dispatchers.IO) {
-            val tweetsFromRaw = getTweetsFromRaw(this@TweetsActivity, R.raw.tweets)
-            val tweets = tweetsFromRaw.filter { it.content != null }
-
-            withContext(Dispatchers.Main) {
-                val customAdapter = CustomAdapter(tweets)
+        val appDatabase = Room.databaseBuilder(this, AppDatabase::class.java, "app_database").build()
+        val tweetDao = appDatabase.tweetDao()
+        val dataSource = DataSourceImpl(tweetDao)
+        dataSource.fetchTweets()
+            .subscribeOn(Schedulers.io())
+            .map { tweets ->
+                tweets.filter { it.content != null }
+            }
+            .subscribe { filteredTweets ->
+                val customAdapter = CustomAdapter(filteredTweets)
                 recyclerView.adapter = customAdapter
                 recyclerView.layoutManager = LinearLayoutManager(this@TweetsActivity)
-
             }
-        }
     }
 
-
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
-    private fun getTweetsFromRaw(context : Context, @RawRes id: Int): List<Tweet>{
+    private fun getTweetsFromRaw(context: Context, @RawRes id: Int): List<Tweet> {
         val tweets = mutableListOf<Tweet>()
         try {
             val gson = Gson()
@@ -67,10 +67,5 @@ class TweetsActivity: AppCompatActivity() {
         }
 
         return tweets
-
     }
-
-
-
 }
-

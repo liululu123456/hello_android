@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.thoughtworks.androidtrain.R
-import com.thoughtworks.androidtrain.model.Tweet
+import com.thoughtworks.androidtrain.model.entity.Tweet
 
 class CustomAdapter(private var dataSet: List<Tweet>) :
     RecyclerView.Adapter<ViewHolder>() {

@@ -71,6 +71,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.rxjava2)
     implementation(libs.androidx.datastore.preferences)
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.kotlinx.coroutines.android)

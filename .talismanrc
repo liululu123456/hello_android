@@ -1,4 +1,6 @@
 fileignoreconfig:
-- filename: app/src/main/res/raw/tweets.json
-  checksum: 04bf9230d2fa7bf8636d895b7df4c9bde8b2708cba4fa43b932d8992f7379cdc
+- filename: app/src/main/java/com/thoughtworks/androidtrain/model/entity/Image.kt
+  checksum: c0c6e9906c8826ba6400f6ad552d30983e631733291f102d7d5b971bef2dc6f6
+- filename: app/src/main/java/com/thoughtworks/androidtrain/model/entity/Sender.kt
+  checksum: 59bc053a302364a0e8c221680fdc57a6a489fac49dc7a735ff1630ad9c444531
 version: ""
