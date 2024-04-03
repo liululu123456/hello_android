@@ -16,6 +16,7 @@ import com.thoughtworks.androidtrain.adapter.CustomAdapter
 import com.thoughtworks.androidtrain.model.AppDatabase
 import com.thoughtworks.androidtrain.model.DataSourceImpl
 import com.thoughtworks.androidtrain.model.entity.Tweet
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.io.ByteArrayOutputStream
 import java.io.IOException
@@ -30,42 +31,12 @@ class TweetsActivity: AppCompatActivity() {
 
         val appDatabase = Room.databaseBuilder(this, AppDatabase::class.java, "app_database").build()
         val tweetDao = appDatabase.tweetDao()
-        val dataSource = DataSourceImpl(tweetDao)
-        dataSource.fetchTweets()
-            .subscribeOn(Schedulers.io())
-            .map { tweets ->
-                tweets.filter { it.content != null }
-            }
-            .subscribe { filteredTweets ->
-                val customAdapter = CustomAdapter(filteredTweets)
+        val dataSource = DataSourceImpl(this@TweetsActivity,R.raw.tweets,tweetDao)
+        val filteredTweets = dataSource.fetchTweets().map { tweets ->
+            tweets.filter { it.content != null }
+        }
+        val customAdapter = CustomAdapter(filteredTweets.blockingFirst())
                 recyclerView.adapter = customAdapter
                 recyclerView.layoutManager = LinearLayoutManager(this@TweetsActivity)
-            }
-    }
-
-    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
-    private fun getTweetsFromRaw(context: Context, @RawRes id: Int): List<Tweet> {
-        val tweets = mutableListOf<Tweet>()
-        try {
-            val gson = Gson()
-            val r: Resources = context.resources
-            val json = r.openRawResource(id)
-            var i = json.read()
-            val baos = ByteArrayOutputStream()
-            while (i != -1) {
-                baos.write(i)
-                i = json.read()
-            }
-            json.close()
-            val jsonString = baos.toString()
-
-            val tweetListType = object : TypeToken<List<Tweet>>() {}.type
-            tweets.addAll(gson.fromJson(jsonString, tweetListType))
-
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-
-        return tweets
     }
 }

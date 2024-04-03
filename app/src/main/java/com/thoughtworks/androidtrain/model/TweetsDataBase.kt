@@ -1,9 +1,13 @@
 package com.thoughtworks.androidtrain.model
 
+import com.thoughtworks.androidtrain.model.entity.CommentListConverter
+import com.thoughtworks.androidtrain.model.entity.ImageListConverter
+import com.thoughtworks.androidtrain.model.entity.SenderConverter
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.thoughtworks.androidtrain.model.dao.CommentDao
 import com.thoughtworks.androidtrain.model.dao.ImageDao
 import com.thoughtworks.androidtrain.model.dao.SenderDao
@@ -14,6 +18,7 @@ import com.thoughtworks.androidtrain.model.entity.Sender
 import com.thoughtworks.androidtrain.model.entity.Tweet
 
 @Database(entities = [Tweet::class, Image::class, Comment::class, Sender::class], version = 1)
+@TypeConverters(ImageListConverter::class, SenderConverter::class, CommentListConverter::class )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun tweetDao(): TweetDao
     abstract fun imageDao(): ImageDao
