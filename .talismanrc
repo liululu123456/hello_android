@@ -1,4 +1,4 @@
 fileignoreconfig:
-- filename: app/src/main/java/com/thoughtworks/androidtrain/TweetsActivity.kt
-  checksum: 10c285f84e06a470a4bd0a1a6ce6111d4ef2898035e2a22c9996353d9542126d
+- filename: app/src/main/java/com/thoughtworks/androidtrain/DataStoreActivity.kt
+  checksum: d582f8dfd2194f8cde121f02c2e37be18d158a3e4bd64a180905fd65695fcfbb
 version: ""

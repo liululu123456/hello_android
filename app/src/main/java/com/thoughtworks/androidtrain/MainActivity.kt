@@ -97,6 +97,13 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+
+            if (i == 8){
+                button.setOnClickListener {
+                    val intent = Intent(this, DataStoreActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         }
 
     }

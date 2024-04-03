@@ -7,7 +7,7 @@
     <string name="button4">fragment</string>
     <string name="button10">button 10</string>
     <string name="button9">button 9</string>
-    <string name="button8">button 8</string>
+    <string name="button8">DataStore</string>
     <string name="button7">SharedPreference</string>
     <string name="button6">counter</string>
     <string name="button5">RecyclerView</string>
