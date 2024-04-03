@@ -38,4 +38,8 @@
     <string name="androidText">Android is a mobile operating system based on a modified version of the Linux kernel and other\nopen source software, designed primarily for touchscreen mobile devices such as smartphones\nand tablets.</string>
     <string name="javaText">Java is a High Level, class-based, object-oriented programming language that is designed to have\nas few implementation dependencies as possible.</string>
     <string name="bottomBar">到底了</string>
+    <string name="hintTitle">提示信息：</string>
+    <string name="hintContent">点击知道了不再提示</string>
+    <string name="gotIt">知道了</string>
+    <string name="welcomeBack">欢迎回来</string>
 </resources>

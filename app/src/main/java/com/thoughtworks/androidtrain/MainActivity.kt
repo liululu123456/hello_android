@@ -90,6 +90,13 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             }
+
+            if (i == 7){
+                button.setOnClickListener {
+                    val intent = Intent(this, SharedPreferenceActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         }
 
     }
