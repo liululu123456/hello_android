@@ -1,4 +1,4 @@
-package com.thoughtworks.androidtrain.model.entity
+package com.thoughtworks.androidtrain.model.mapper
 
 import androidx.room.TypeConverter
 import com.google.gson.Gson

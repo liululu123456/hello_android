@@ -1,8 +1,8 @@
 package com.thoughtworks.androidtrain.model
 
-import com.thoughtworks.androidtrain.model.entity.CommentListConverter
-import com.thoughtworks.androidtrain.model.entity.ImageListConverter
-import com.thoughtworks.androidtrain.model.entity.SenderConverter
+import com.thoughtworks.androidtrain.model.mapper.CommentListConverter
+import com.thoughtworks.androidtrain.model.mapper.ImageListConverter
+import com.thoughtworks.androidtrain.model.mapper.SenderConverter
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
