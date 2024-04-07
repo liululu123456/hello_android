@@ -1,16 +1,13 @@
 package com.thoughtworks.androidtrain.model
 
 import android.content.Context
-import android.os.Build
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.thoughtworks.androidtrain.model.dao.TweetDao
 import com.thoughtworks.androidtrain.model.entity.Tweet
 import io.reactivex.Flowable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
@@ -19,13 +16,14 @@ import okhttp3.Response
 import java.io.IOException
 
 
-class DataSourceImpl(private val context: Context,private val id: Int, private val tweetDao: TweetDao) : DataSource {
+class DataSourceImpl(private val context: Context, private val tweetDao: TweetDao) : DataSource {
+    private val JSON_URL = "https://raw.githubusercontent.com/TW-Android-Junior-Training/android_training_practice/main/json/tweets.json"
 
     override suspend fun fetchTweets(): Flowable<List<Tweet>> = withContext(Dispatchers.IO) {
 
         val client = OkHttpClient()
         val request = Request.Builder()
-            .url("https://raw.githubusercontent.com/TW-Android-Junior-Training/android_training_practice/main/json/tweets.json")
+            .url(JSON_URL)
             .build()
         var networkFlowable: Flowable<List<Tweet>>? = null
         try {

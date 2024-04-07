@@ -34,7 +34,7 @@ class TweetsActivity: AppCompatActivity() {
 
         val appDatabase = Room.databaseBuilder(this, AppDatabase::class.java, "app_database").build()
         val tweetDao = appDatabase.tweetDao()
-        val dataSource = DataSourceImpl(this@TweetsActivity,R.raw.tweets,tweetDao)
+        val dataSource = DataSourceImpl(this@TweetsActivity,tweetDao)
         var filteredTweets: Flowable<List<Tweet>> = Flowable.empty()
         lifecycleScope.launch{
             filteredTweets = dataSource.fetchTweets().map { tweets ->
