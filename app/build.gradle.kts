@@ -72,6 +72,8 @@ android {
 }
 
 dependencies {
+    implementation (libs.okhttp)
+    implementation (libs.gson.v288)
     implementation(libs.rxandroid)
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
