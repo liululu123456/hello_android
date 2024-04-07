@@ -1,6 +1,7 @@
 [versions]
 agp = "8.3.1"
 coil = "1.4.0"
+converterScalars = "2.9.0"
 datastorePreferences = "1.0.0"
 gson = "2.10.1"
 kotlin = "1.9.0"
@@ -26,6 +27,8 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 androidx-room-rxjava2 = { module = "androidx.room:room-rxjava2", version.ref = "roomRuntime" }
 androidx-room-rxjava3 = { module = "androidx.room:room-rxjava3", version.ref = "roomRuntime" }
 coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterScalars" }
+converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "converterScalars" }
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -35,6 +38,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converterScalars" }
 rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
 
 [plugins]

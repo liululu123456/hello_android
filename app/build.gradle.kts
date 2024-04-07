@@ -72,6 +72,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.converter.gson)
+    implementation(libs.retrofit)
+    implementation(libs.converter.scalars)
     implementation(libs.rxandroid)
     implementation(libs.androidx.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
