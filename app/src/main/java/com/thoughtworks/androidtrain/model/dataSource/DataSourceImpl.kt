@@ -1,8 +1,8 @@
-package com.thoughtworks.androidtrain.model
+package com.thoughtworks.androidtrain.model.dataSource
 
 import android.content.Context
 import android.widget.Toast
-import com.thoughtworks.androidtrain.TweetApi
+import com.thoughtworks.androidtrain.model.port.TweetApi
 import com.thoughtworks.androidtrain.model.dao.TweetDao
 import com.thoughtworks.androidtrain.model.entity.Tweet
 import io.reactivex.Flowable

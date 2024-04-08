@@ -1,4 +1,4 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.ui.activity
 
 import android.os.Build
 import android.os.Bundle
@@ -9,9 +9,12 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.thoughtworks.androidtrain.viewModal.MainViewModal
+import com.thoughtworks.androidtrain.viewModal.MainViewModalFactory
+import com.thoughtworks.androidtrain.R
 import com.thoughtworks.androidtrain.adapter.CustomAdapter
-import com.thoughtworks.androidtrain.model.AppDatabase
-import com.thoughtworks.androidtrain.model.DataSourceImpl
+import com.thoughtworks.androidtrain.model.dataBase.AppDatabase
+import com.thoughtworks.androidtrain.model.dataSource.DataSourceImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -44,7 +47,7 @@ class TweetsActivity: AppCompatActivity() {
         return DataSourceImpl(this@TweetsActivity,tweetDao)
 
     }
-    private fun initViewModal( dataSource : DataSourceImpl): MainViewModal{
+    private fun initViewModal( dataSource : DataSourceImpl): MainViewModal {
         val viewModelFactory = MainViewModalFactory(dataSource)
         return ViewModelProvider(this, viewModelFactory)[MainViewModal::class.java]
     }

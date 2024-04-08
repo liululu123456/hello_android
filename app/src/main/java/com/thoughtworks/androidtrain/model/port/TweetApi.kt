@@ -1,4 +1,4 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.model.port
 
 import com.thoughtworks.androidtrain.model.entity.Tweet
 import retrofit2.Response

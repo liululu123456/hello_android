@@ -1,8 +1,8 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.viewModal
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.thoughtworks.androidtrain.model.DataSource
+import com.thoughtworks.androidtrain.model.dataSource.DataSource
 
 class MainViewModalFactory(private val dataSource: DataSource) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -1,4 +1,4 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.ui.activity
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
+import com.thoughtworks.androidtrain.R
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch

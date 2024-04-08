@@ -1,8 +1,8 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.viewModal
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.thoughtworks.androidtrain.model.DataSource
+import com.thoughtworks.androidtrain.model.dataSource.DataSource
 import com.thoughtworks.androidtrain.model.entity.Tweet
 
 class MainViewModal(private val dataSource: DataSource): ViewModel() {

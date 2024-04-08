@@ -1,10 +1,11 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.ui.activity
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.thoughtworks.androidtrain.fragment.AndroidTextFragment
-import com.thoughtworks.androidtrain.fragment.JavaTextFragment
+import com.thoughtworks.androidtrain.R
+import com.thoughtworks.androidtrain.ui.fragment.AndroidTextFragment
+import com.thoughtworks.androidtrain.ui.fragment.JavaTextFragment
 
 class LanguageSelectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

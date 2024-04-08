@@ -1,4 +1,4 @@
-package com.thoughtworks.androidtrain.model
+package com.thoughtworks.androidtrain.model.dataBase
 
 import com.thoughtworks.androidtrain.model.entity.CommentListConverter
 import com.thoughtworks.androidtrain.model.entity.ImageListConverter

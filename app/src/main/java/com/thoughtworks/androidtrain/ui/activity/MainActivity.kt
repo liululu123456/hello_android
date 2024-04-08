@@ -1,4 +1,4 @@
-package com.thoughtworks.androidtrain
+package com.thoughtworks.androidtrain.ui.activity
 
 import android.app.Activity
 import android.content.Intent
@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.Manifest;
+import com.thoughtworks.androidtrain.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             val button = Button(this)
 
             val buttonStringId = resources.getIdentifier("button$i", "string", packageName)
-            val buttonBackgroundColor = ContextCompat.getColor(this,R.color.gray)
+            val buttonBackgroundColor = ContextCompat.getColor(this, R.color.gray)
             button.text = resources.getString(buttonStringId)
             button.setBackgroundColor(buttonBackgroundColor)
 
