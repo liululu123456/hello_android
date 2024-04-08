@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName
 data class Tweet(
     @PrimaryKey val id: Long,
     var content: String?,
+    var date: String?,
     var images: List<Image>?,
     var sender: Sender?,
     var comments: List<Comment>?,

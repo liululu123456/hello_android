@@ -1,5 +1,6 @@
 package com.thoughtworks.androidtrain.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -59,6 +60,12 @@ class CustomAdapter(private var dataSet: List<Tweet>) :
 
     override fun getItemCount(): Int {
         return dataSet.size + 1
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateData(tweets: List<Tweet>) {
+        dataSet = tweets
+        notifyDataSetChanged()
     }
 
 }
