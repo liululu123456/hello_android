@@ -11,6 +11,10 @@ android {
     namespace = "com.thoughtworks.androidtrain"
     compileSdk = 34
 
+    testOptions{
+        unitTests.isIncludeAndroidResources = true
+    }
+
     defaultConfig {
         applicationId = "com.thoughtworks.androidtrain"
         minSdk = 24
@@ -92,6 +96,10 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
+    testImplementation(libs.androidx.core)
+    testImplementation(libs.mockito.core)
+    testImplementation (libs.robolectric)
+    testImplementation (libs.androidx.core.testing)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
