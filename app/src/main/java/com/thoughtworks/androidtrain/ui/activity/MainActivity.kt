@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             if (i == 2){
+                button.tag = "loginBtn"
                 button.setOnClickListener {
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

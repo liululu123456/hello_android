@@ -81,6 +81,7 @@ dependencies {
     implementation(libs.converter.scalars)
     implementation(libs.rxandroid)
     implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.junit.ktx)
     annotationProcessor(libs.androidx.room.compiler)
     kapt("androidx.room:room-compiler:2.6.1")
     implementation(libs.androidx.room.rxjava2)
@@ -100,6 +101,9 @@ dependencies {
     testImplementation(libs.mockito.core)
     testImplementation (libs.robolectric)
     testImplementation (libs.androidx.core.testing)
+    testImplementation(libs.androidx.espresso.core.v340)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.espresso.core.v340)
+    androidTestImplementation(libs.androidx.junit.v113)
 }
