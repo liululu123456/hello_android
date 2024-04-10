@@ -82,6 +82,7 @@ dependencies {
     implementation(libs.rxandroid)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.junit.ktx)
+    implementation(libs.core)
     annotationProcessor(libs.androidx.room.compiler)
     kapt("androidx.room:room-compiler:2.6.1")
     implementation(libs.androidx.room.rxjava2)

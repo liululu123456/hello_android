@@ -24,6 +24,7 @@ robolectric = "4.5.1"
 roomRuntime = "2.6.1"
 rxandroid = "3.0.0"
 junitKtx = "1.1.5"
+coreVersion = "1.42.0"
 
 [libraries]
 androidx-core = { module = "androidx.test:core", version.ref = "core" }
@@ -54,6 +55,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "converte
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+core = { group = "com.google.ar", name = "core", version.ref = "coreVersion" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
