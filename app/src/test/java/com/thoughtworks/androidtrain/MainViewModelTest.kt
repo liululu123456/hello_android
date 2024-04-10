@@ -7,6 +7,7 @@ import com.thoughtworks.androidtrain.model.entity.Tweet
 import com.thoughtworks.androidtrain.viewModel.MainViewModel
 import io.reactivex.Flowable
 import kotlinx.coroutines.runBlocking
+import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -32,6 +33,11 @@ class MainViewModelTest {
         MockitoAnnotations.initMocks(this)
         viewModel = MainViewModel(mockDataSource)
         viewModel.tweetsLiveData.observeForever(mockObserver)
+    }
+
+    @After
+    fun clear(){
+        viewModel.tweetsLiveData.removeObserver(mockObserver)
     }
 
 
