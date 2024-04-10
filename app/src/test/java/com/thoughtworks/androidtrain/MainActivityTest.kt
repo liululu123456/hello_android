@@ -18,7 +18,7 @@ import org.robolectric.shadows.ShadowApplication
 
 
 @RunWith(RobolectricTestRunner::class)
-@Config(sdk = [28])
+@Config(sdk = [30])
 class MainActivityTest {
     private lateinit var mainActivity: MainActivity
 
@@ -36,7 +36,7 @@ class MainActivityTest {
 
 
         val loginPageActivity: LoginActivity = Robolectric.buildActivity(LoginActivity::class.java).create()
-                .get() as LoginActivity
+                .get()
 
         val rememberMeCheckbox: CheckBox = loginPageActivity.findViewById(R.id.checkbox)
 

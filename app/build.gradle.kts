@@ -76,6 +76,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.core.ktx)
     implementation(libs.converter.gson)
     implementation(libs.retrofit)
     implementation(libs.converter.scalars)

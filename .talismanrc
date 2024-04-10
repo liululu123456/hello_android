@@ -1,6 +1,6 @@
 fileignoreconfig:
-- filename: app/src/main/java/com/thoughtworks/androidtrain/model/entity/Image.kt
-  checksum: c0c6e9906c8826ba6400f6ad552d30983e631733291f102d7d5b971bef2dc6f6
-- filename: app/src/main/java/com/thoughtworks/androidtrain/model/entity/Sender.kt
-  checksum: 59bc053a302364a0e8c221680fdc57a6a489fac49dc7a735ff1630ad9c444531
+- filename: .idea/androidTestResultsUserPreferences.xml
+  checksum: 1712989a5296bfc73700eab6ec87379a2f1ca551148fb884eb74f8c499b7e192
+- filename: .idea/deploymentTargetDropDown.xml
+  checksum: 0daeb41304d53d13fa12f7036b2e28cafcfe1c75224859a2770bdfb255b841b4
 version: ""
