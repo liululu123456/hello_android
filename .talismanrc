@@ -1,5 +1,4 @@
 fileignoreconfig:
-- filename: .idea/deploymentTargetDropDown.xml
-  checksum: 0daeb41304d53d13fa12f7036b2e28cafcfe1c75224859a2770bdfb255b841b4
+- filename: app/src/main/java/com/thoughtworks/androidtrain/ui/activity/ComposeTweetsActivity.kt
+  checksum: 16e28ded3ff1a9a2613cb666462ed761e30b98391e373bea743af98807e28551
 version: ""
-

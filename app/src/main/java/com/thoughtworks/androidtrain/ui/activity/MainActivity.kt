@@ -12,15 +12,15 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.Manifest;
+import androidx.appcompat.app.AppCompatActivity
 import com.thoughtworks.androidtrain.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity(){
 
     private val REQUEST_SELECT_CONTACT = 1
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -103,6 +103,13 @@ class MainActivity : AppCompatActivity() {
             if (i == 8){
                 button.setOnClickListener {
                     val intent = Intent(this, DataStoreActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+
+            if (i == 9){
+                button.setOnClickListener {
+                    val intent = Intent(this, ComposeTweetsActivity::class.java)
                     startActivity(intent)
                 }
             }
