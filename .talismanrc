@@ -1,4 +1,4 @@
 fileignoreconfig:
-- filename: app/src/main/java/com/thoughtworks/androidtrain/ui/activity/ComposeTweetsActivity.kt
-  checksum: 16e28ded3ff1a9a2613cb666462ed761e30b98391e373bea743af98807e28551
+- filename: app/src/main/java/com/thoughtworks/androidtrain/ui/compose/TextFieldWithButtons.kt
+  checksum: 6d02d7e81bbc8d498db60469cafbc23b7e3bd6f228e30d62679edb6818d07861
 version: ""

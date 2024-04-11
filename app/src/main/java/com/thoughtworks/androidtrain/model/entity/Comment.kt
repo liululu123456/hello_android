@@ -5,5 +5,5 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "comment")
 data class Comment(@PrimaryKey val id: Long,
-                   val content: String, val sender: Sender
+                   var content: String, val sender: Sender
 )
